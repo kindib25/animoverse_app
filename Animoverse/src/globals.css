@@ -43,7 +43,7 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
+  --background: #050e1b;
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
@@ -112,9 +112,10 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply box-border list-none p-0 m-0 scroll-smooth;
   }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-white min-h-screen;
   }
 }
