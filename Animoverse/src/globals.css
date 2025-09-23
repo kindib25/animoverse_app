@@ -110,6 +110,7 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+
 @layer base {
   * {
     @apply box-border list-none p-0 m-0 scroll-smooth;
@@ -118,4 +119,12 @@
   body {
     @apply bg-background text-white min-h-screen;
   }
+}
+
+@layer components {
+
+  .shad-input {
+    @apply h-12 bg-[#1F1F22] border-none placeholder:text-[#5C5C7B] focus-visible:ring-1 focus-visible:ring-offset-1 ring-offset-[#7878A3];
+  }
+
 }
