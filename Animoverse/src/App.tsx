@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import './globals.css';
+import "@fontsource/space-mono/400.css";
 import SigninForm from './_auth/forms/SigninForm';
 import SignupForm from './_auth/forms/SignupForm';
 import { Home } from './_root/pages';
