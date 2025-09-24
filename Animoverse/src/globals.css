@@ -60,7 +60,7 @@
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(92.191% 0.0001 271.152);
   --input: oklch(0.922 0 0);
-  --ring: #c3db3f;
+  --ring: oklch(0.708 0 0);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -143,22 +143,99 @@
   }
 }
 
-@layer components {
- .shad-form_label {
-    @apply text-white;
+@layer utilities {
+   .h1-bold {
+    @apply text-[36px] font-bold leading-[140%] tracking-tighter;
   }
 
+  .h1-semibold {
+    @apply text-[36px] font-semibold leading-[140%] tracking-tighter;
+  }
 
-
-}
-
-@layer utilities {
   .h2-bold {
     @apply text-[30px] font-bold leading-[140%] tracking-tighter;
   }
 
-    .shad-button_primary {
-    @apply bg-primary text-primary-foreground flex gap-2 rounded-md cursor-pointer hover:bg-green transition;
+  .h3-bold {
+    @apply text-[24px] font-bold leading-[140%] tracking-tighter;
+  }
+
+  .base-semibold {
+    @apply text-[16px] font-semibold leading-[140%] tracking-tighter;
+  }
+
+  .base-medium {
+    @apply text-[16px] font-medium leading-[140%];
+  }
+
+  .base-regular {
+    @apply text-[16px] font-normal leading-[140%];
+  }
+
+  .body-bold {
+    @apply text-[18px] font-bold leading-[140%];
+  }
+
+  .body-medium {
+    @apply text-[18px] font-medium leading-[140%];
+  }
+
+  .small-semibold {
+    @apply text-[14px] font-semibold leading-[140%] tracking-tighter;
+  }
+
+  .small-medium {
+    @apply text-[14px] font-medium leading-[140%];
+  }
+
+  .small-regular {
+    @apply text-[14px] font-normal leading-[140%];
+  }
+
+  .subtle-semibold {
+    @apply text-[12px] font-semibold leading-[140%];
+  }
+
+  .tiny-medium {
+    @apply text-[10px] font-medium leading-[140%];
+  }
+
+  /* UTILITIES */
+  .invert-white {
+    @apply invert brightness-0 transition;
+  }
+
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+
+  .flex-between {
+    @apply flex justify-between items-center;
+  }
+
+  .flex-start {
+    @apply flex justify-start items-center;
+  }
+
+  /* SHADCN COMPONENTS */
+
+  .shad-button_primary {
+    @apply bg-primary text-primary-foreground text-[20px] flex gap-2 mt-2 py-8 rounded-md cursor-pointer hover:bg-green transition;
+  }
+
+  .shad-input {
+    @apply h-12 bg-[#172232] border-none placeholder:text-light-4 focus-visible:ring-1 focus-visible:ring-offset-1 ring-offset-green;
   }
 }
 
+@layer components {
+
+  .shad-form_label {
+    @apply text-white;
+  }
+
+  .loading_spinner {
+    @apply mx-auto h-5 w-5 animate-spin rounded-full border-2 border-gray-800 border-t-transparent group-hover:border-white group-hover:border-t-transparent;
+  }
+
+}
